@@ -40,7 +40,7 @@
             {
                 using (ManagementObjectCollection ProcessorWin = new ManagementObjectSearcher(NAME).Get())
                 {
-                    foreach (ManagementObject obj in ProcessorWin)
+                    foreach (ManagementBaseObject obj in ProcessorWin)
                     {
                         result = obj["ProcessorId"]?.ToString().Substring(0, 4);
                         break;
@@ -59,7 +59,7 @@
             {
                 using (ManagementObjectCollection BiosWin = new ManagementObjectSearcher(NAME).Get())
                 {
-                    foreach (ManagementObject bios_Collection in BiosWin)
+                    foreach (ManagementBaseObject bios_Collection in BiosWin)
                     {
                         result = bios_Collection["Version"]?.ToString().Substring(0, 4);
                         break;
@@ -78,7 +78,7 @@
             {
                 using (ManagementObjectCollection BiosWin = new ManagementObjectSearcher(NAME).Get())
                 {
-                    foreach (ManagementObject hdd_Collection in BiosWin) 
+                    foreach (ManagementBaseObject hdd_Collection in BiosWin) 
                     {
                         result = hdd_Collection["Signature"]?.ToString().Substring(0, 4);
                         break;
