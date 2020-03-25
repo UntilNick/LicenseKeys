@@ -11,8 +11,8 @@
      Ключ на выходе (XXXXXXXX-XXXXXXXX-XXXXXXXX-XXXXXXXX-XXXXXXXX)
 
      Используется так: 
-     HardInfo.GetLicenseKey(); - Без привязки к железу
-     HardInfo.GetLicenseKey(true); - С привязкой к железу
+     HardInfo.GetLicenseKey(); - Без привязки 
+     HardInfo.GetLicenseKey(true); - С привязкой
     */
 
     public static class HardInfo
@@ -229,7 +229,7 @@
             GetBIOSmaker("Caption"),
             GetPhysicalMemory());
 
-            if (bind_to_windows) // Привязка к железу
+            if (bind_to_windows) 
             {
                 info += $"|{string.Join("|", GetOSInfo(), GetAccountName(), GetComputerName())}";
             }
